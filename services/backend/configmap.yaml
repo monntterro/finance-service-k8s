@@ -1,0 +1,18 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: backend-configmap
+data:
+  # JPA
+  JPA_IS_SHOW_SQL: "true"
+
+  # Flyway
+  FLYWAY_SCHEMA: "public"
+
+  # CORS
+  CORS_ORIGIN_1: "http://176.100.124.36:5975"
+  CORS_ORIGIN_2: "https://finance.alekcteam.space"
+
+  # Postgres
+  PG_PORT_FOR_CONNECT: "5432"
+  PG_HOST_FOR_CONNECT: "backend-postgres-service"

@@ -1,0 +1,14 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: user-service-configmap
+data:
+  PG_DB: "user-service-db"
+  PG_PORT_FOR_CONNECT: "5432"
+  PG_HOST_FOR_CONNECT: "user-service-postgres-service"
+
+  # JPA
+  JPA_IS_SHOW_SQL: "true"
+
+  #Flyway
+  FLYWAY_SCHEMA: "public"

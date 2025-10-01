@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-app
+  template:
+    metadata:
+      labels:
+        app: frontend-app
+    spec:
+      containers:
+        - name: frontend-app
+          image: monntterro/finance-ui:latest
+          ports:
+            - name: ui
+              containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: frontend-configmap

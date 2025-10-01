@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user-service-app
+  template:
+    metadata:
+      labels:
+        app: user-service-app
+    spec:
+      containers:
+        - name: user-service-app
+          image: monntterro/user-service:latest
+          ports:
+            - name: api
+              containerPort: 8084
+          envFrom:
+            - configMapRef:
+                name: user-service-configmap
+            - secretRef:
+                name: user-service-secret

@@ -1,0 +1,17 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: gateway-configmap
+data:
+  SPRING_PROFILES_ACTIVE: finance # free-eng, learnhive, finance, mocked
+
+  # Services
+  USER_SERVICE_API_URL: http://user-service-app-service:8084/api/v1
+  FINANCE_API_URL: http://backend-app-service:8081
+
+  # CORS
+  CORS1: "http://frontend.local:8080"
+  CORS2: "http://frontend.local:80"
+  CORS3: "frontend.local:8080"
+
+  LOGGING_LEVEL: DEBUG # Установите DEBUG - если хотите логировать запросы которые идут в нижестоящие сервисы

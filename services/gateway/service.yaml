@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: gateway-service
+spec:
+  selector:
+    app: gateway
+  type: ClusterIP
+  ports:
+    - name: api
+      port: 8085
+      targetPort: 8085
