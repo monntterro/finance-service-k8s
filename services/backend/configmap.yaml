@@ -10,8 +10,8 @@ data:
   FLYWAY_SCHEMA: "public"
 
   # CORS
-  CORS_ORIGIN_1: "http://176.100.124.36:5975"
-  CORS_ORIGIN_2: "https://finance.alekcteam.space"
+  CORS_ORIGIN_1: "http://frontend.local:8080" # должен совпадать как и CORS в ./services/gateway/configmap.yaml
+  CORS_ORIGIN_2: "-"
 
   # Postgres
   PG_PORT_FOR_CONNECT: "5432"

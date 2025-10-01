@@ -11,7 +11,7 @@ data:
 
   # CORS
   CORS1: "http://frontend.local:8080"
-  CORS2: "http://frontend.local:80"
-  CORS3: "frontend.local:8080"
+  CORS2: "-"
+  CORS3: "-"
 
   LOGGING_LEVEL: DEBUG # Установите DEBUG - если хотите логировать запросы которые идут в нижестоящие сервисы

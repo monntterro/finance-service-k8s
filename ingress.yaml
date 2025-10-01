@@ -3,11 +3,7 @@ kind: Ingress
 metadata:
   name: finance-ingress
   annotations:
-    nginx.ingress.kubernetes.io/enable-cors: "false"
     kubernetes.io/ingress.class: "nginx"
-    nginx.ingress.kubernetes.io/configuration-snippet: | # Проверить этот способ (еще не пробовал), перед этим включить это
-      proxy_set_header Host $http_host;  
-      proxy_set_header Origin http://gateway.local
 
 spec:
   ingressClassName: nginx
